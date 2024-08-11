@@ -23,3 +23,5 @@ func main() {
 		fmt.Printf("%v - %T - %#U - %#x", v, v, v, v)
 	}
 }
+
+/* REMEMBERING HOW TO USE GO */
