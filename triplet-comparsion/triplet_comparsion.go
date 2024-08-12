@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /*
  * Complete the 'compareTriplets' function below.
  *
@@ -10,11 +12,25 @@ package main
  */
 
 func compareTriplets(a []int32, b []int32) []int32 {
+	var apoints int32
+	var bpoints int32
 
-	return nil
+	for i := 0; i < len(a); i++ {
+		if a[i] > b[i] {
+			apoints += 1
+		} else if a[i] < b[i] {
+			bpoints += 1
+		}
+	}
+
+	return []int32{apoints, bpoints}
 }
 
 func main() {
-	var a = [3]int32{}
-	var b = [3]int32{}
+	var a = []int32{1, 2, 3}
+	var b = []int32{3, 2, 1}
+
+	result := compareTriplets(a, b)
+
+	fmt.Println(result)
 }
